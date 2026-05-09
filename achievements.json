@@ -1,0 +1,93 @@
+[
+  {
+    "studentId": "STU001",
+    "studentName": "さくら",
+    "origami": "しゅりけん",
+    "stepTimes": [
+      2,
+      2,
+      1,
+      2,
+      1
+    ],
+    "date": "2026-04-07"
+  },
+  {
+    "studentId": "STU001",
+    "studentName": "さくら",
+    "origami": "かみひこうき",
+    "stepTimes": [
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "date": "2026-04-07"
+  },
+  {
+    "studentId": "STU001",
+    "studentName": "さくら",
+    "origami": "しゅりけん",
+    "stepTimes": [
+      2,
+      2,
+      2,
+      2,
+      3
+    ],
+    "date": "2026-04-08"
+  },
+  {
+    "studentId": "STU001",
+    "studentName": "さくら",
+    "origami": "しゅりけん",
+    "stepTimes": [
+      4,
+      1,
+      2,
+      2,
+      2
+    ],
+    "date": "2026-04-08"
+  },
+  {
+    "studentId": "STU001",
+    "studentName": "さくら",
+    "origami": "しゅりけん",
+    "stepTimes": [
+      3,
+      3,
+      1,
+      1,
+      1
+    ],
+    "date": "2026-04-08"
+  },
+  {
+    "studentId": "STU001",
+    "studentName": "さくら",
+    "origami": "しゅりけん",
+    "stepTimes": [
+      2,
+      4,
+      2,
+      1,
+      1
+    ],
+    "date": "2026-04-08"
+  },
+  {
+    "studentId": "STU001",
+    "studentName": "さくら",
+    "origami": "しゅりけん",
+    "stepTimes": [
+      5,
+      5,
+      2,
+      1,
+      1
+    ],
+    "date": "2026-04-09"
+  }
+]

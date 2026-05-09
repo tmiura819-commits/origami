@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>おりがみ e-learning</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="mascot-area">
+    <img src="{{ url_for('static', filename='mascot.png') }}" alt="おりがみキャラクター">
+  </div>
+
+  <div class="main-area">
+    <!-- ログイン -->
+    <div id="login-screen" class="card">
+      <h1>おりがみ e-learning</h1>
+      <p>ＩＤとパスワードをいれてね</p>
+      <div>
+        <input id="login-id" type="text" placeholder="ID (S001 / T001 など)">
+        <input id="login-password" type="password" placeholder="パスワード">
+        <button id="login-btn">ログイン</button>
+      </div>
+      <p id="login-error" class="error-text"></p>
+    </div>
+
+    <!-- 生徒用：スタート -->
+    <div id="student-start-screen" class="card hidden">
+      <h2 id="student-name-label">こんにちは！</h2>
+      <p>いっしょにおりがみをする？</p>
+      <div class="button-row">
+        <button id="btn-do-origami">する！</button>
+        <button id="btn-later">あとで！</button>
+      </div>
+    </div>
+
+    <!-- 生徒用：折りたいもの -->
+    <div id="student-select-origami" class="card hidden">
+      <h2>なにをおりたい？</h2>
+      <div class="button-row">
+        <button data-origami="しゅりけん">しゅりけん！</button>
+        <button data-origami="つる">つる！</button>
+        <button data-origami="かみひこうき">かみひこうき！</button>
+        <button id="btn-maybe-no">やっぱいいかな…</button>
+      </div>
+    </div>
+
+    <!-- 生徒用：またいっしょに -->
+    <div id="student-come-again" class="card hidden">
+      <h2>またいっしょにおりがみしようね！</h2>
+      <div class="button-row">
+        <button id="btn-do-after-all">やっぱりおりがみする！</button>
+        <button id="btn-bye">バイバイ！</button>
+      </div>
+    </div>
+
+    <!-- 生徒用：折り方ステップ -->
+    <div id="student-steps-screen" class="card hidden">
+      <h2 id="steps-title">●●の折り方</h2>
+      <p>みたいステップをえらんでね</p>
+      <div id="steps-links" class="button-row"></div>
+
+      <div class="video-area">
+        <h3 id="current-step-label"></h3>
+        <video id="origami-video" controls class="hidden">
+          <source id="origami-video-source" src="" type="video/mp4">
+          お使いのブラウザでは動画が再生できません。
+        </video>
+        <div class="button-row" id="step-control-row" class="hidden">
+          <button id="btn-step-finished">つぎへ</button>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="btn-other-origami">ちがうものをつくる！</button>
+        <button id="btn-finished">できた！</button>
+      </div>
+    </div>
+
+    <!-- 生徒用：がんばったね -->
+    <div id="student-done-screen" class="card hidden">
+      <h2>よくがんばったね！</h2>
+      <p>せんせいに見せにいこう！</p>
+      <div class="button-row">
+        <button id="btn-back-to-start">はじめにもどる</button>
+      </div>
+    </div>
+
+    <!-- 先生用：メニュー -->
+    <div id="teacher-menu-screen" class="card hidden">
+      <h2 id="teacher-name-label">せんせいメニュー</h2>
+      <div class="button-row">
+        <button id="btn-student-list">生徒一覧</button>
+        <button id="btn-achievements">達成報告</button>
+      </div>
+    </div>
+
+    <!-- 先生用：生徒一覧 -->
+    <div id="teacher-student-list-screen" class="card hidden">
+      <h2>生徒一覧</h2>
+      <table>
+        <thead>
+          <tr><th>生徒名</th><th>ID</th></tr>
+        </thead>
+        <tbody id="student-list-body"></tbody>
+      </table>
+      <div class="button-row">
+        <button class="btn-back-teacher-menu">メニューにもどる</button>
+      </div>
+    </div>
+
+    <!-- 先生用：達成報告 -->
+    <div id="teacher-achievements-screen" class="card hidden">
+      <h2>達成報告</h2>
+      <p>新着順</p>
+      <ul id="achievement-list"></ul>
+      <div class="button-row">
+        <button class="btn-back-teacher-menu">メニューにもどる</button>
+      </div>
+    </div>
+
+    <!-- 先生用：達成詳細 -->
+    <div id="teacher-achievement-detail-screen" class="card hidden">
+      <h2>達成の詳細</h2>
+      <p id="detail-student-name"></p>
+      <p id="detail-date"></p>
+      <p id="detail-origami"></p>
+      <table>
+        <thead>
+          <tr><th>ステップ</th><th>かかった時間（秒）</th></tr>
+        </thead>
+        <tbody id="detail-steps-body"></tbody>
+      </table>
+      <div class="button-row">
+        <button id="btn-back-achievements">達成報告にもどる</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

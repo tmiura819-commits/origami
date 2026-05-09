@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: "Rounded Mplus 1c", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  background-color: #cfeedd;
+  color: #ffffff;
+  display: flex;
+  min-height: 100vh;
+}
+
+.mascot-area {
+  width: 25%;
+  background-color: #b5ddc8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mascot-area img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.main-area {
+  width: 75%;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #9ccfb5;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  background-color: #ffffff;
+  color: #4a7f5a;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background-color: #f5fff8;
+}
+
+input[type="text"],
+input[type="password"] {
+  border-radius: 999px;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.video-area {
+  margin-top: 15px;
+}
+
+video {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding: 8px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+th {
+  font-weight: bold;
+}
+
+.error-text {
+  color: #ffdddd;
+}
+
+.link-like {
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* -----------------------------
+   ★ 追加：ログアウトボタン
+   ----------------------------- */
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.logout-button:hover {
+  background-color: #ff6b5a;
+}
+
+/* ★ 秒数表示を生徒に見せない（内部では計測） */
+#current-step-label {
+  display: none;
+}
+/* ステップボタンの基本 */
+.step-button {
+  transition: 0.2s;
+}
+
+/* 今見ているステップ（色＋サイズ＋下線バー） */
+.step-button.active {
+  background-color: #4a7f5a !important;
+  color: white !important;
+  transform: scale(1.15);
+  border-bottom: 4px solid #2e5a3a;
+}
+
+/* 見終わったステップ（✔マーク付き） */
+.step-button.done {
+  background-color: #ffffff;
+  color: #4a7f5a;
+}
